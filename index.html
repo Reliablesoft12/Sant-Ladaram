@@ -1,213 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>School Admissions Open - 2025-26</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f0f2f5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-    .banner-container {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-      color: white;
-      text-align: center;
-      max-width: 900px;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 30px;
-      box-sizing: border-box;
-      position: relative;
-      animation: fadeIn 1s ease-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .school-name {
-      font-size: clamp(1.2rem, 5vw, 2.5rem);
-      font-weight: 700;
-      margin-bottom: 15px;
-      color: #ffe670;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-    }
-    .header-text {
-      font-size: clamp(2rem, 8vw, 4rem);
-      font-weight: 700;
-      margin-bottom: 10px;
-      line-height: 1.1;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    }
-    .subheader-text {
-      font-size: clamp(1rem, 4vw, 1.8rem);
-      font-weight: 600;
-      margin-bottom: 25px;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-    }
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-      width: 100%;
-      margin-top: 30px;
-    }
-    .feature-item {
-      background-color: rgba(255, 255, 255, 0.15);
-      border-radius: 15px;
-      padding: 20px;
-      backdrop-filter: blur(5px);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.3s ease, background-color 0.3s ease;
-    }
-    .feature-item:hover {
-      transform: translateY(-5px) scale(1.02);
-      background-color: rgba(255, 255, 255, 0.25);
-    }
-    .feature-icon {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      color: #ffe670;
-    }
-    .feature-text {
-      font-size: clamp(0.9rem, 2.5vw, 1.2rem);
-      font-weight: 600;
-      text-align: center;
-    }
-    .cta-button {
-      background-color: #ffe670;
-      color: #764ba2;
-      padding: 15px 30px;
-      border-radius: 30px;
-      font-weight: 700;
-      font-size: clamp(1rem, 3vw, 1.5rem);
-      margin-top: 40px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      text-decoration: none;
-      display: inline-block;
-    }
-    .cta-button:hover {
-      background-color: #ffd93a;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    }
-    .lang-toggle {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-    .lang-toggle button {
-      background: #ffe670;
-      color: #764ba2;
-      font-weight: 600;
-      border: none;
-      padding: 5px 10px;
-      border-radius: 20px;
-      margin-left: 5px;
-      cursor: pointer;
-    }
-    .lang-content { display: none; }
-    .lang-content.active { display: block; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Admissions Open - 2025-26</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .banner-container {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            color: white;
+            text-align: center;
+            max-width: 900px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            box-sizing: border-box;
+            position: relative;
+            animation: fadeIn 1s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .school-name {
+            font-size: clamp(1.2rem, 5vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #ffe670;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        .header-text {
+            font-size: clamp(2rem, 8vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.1;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .subheader-text {
+            font-size: clamp(1rem, 4vw, 1.8rem);
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            width: 100%;
+            margin-top: 30px;
+        }
+        .feature-item {
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .feature-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #ffe670;
+        }
+        .feature-text {
+            font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+            font-weight: 600;
+            text-align: center;
+        }
+        .cta-button {
+            background-color: #ffe670;
+            color: #764ba2;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            margin-top: 40px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            display: inline-block;
+        }
+        .cta-button:hover {
+            background-color: #ffd93a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .features-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .feature-item {
+                padding: 15px;
+            }
+            .school-name {
+                font-size: clamp(1rem, 6vw, 2rem);
+            }
+            .header-text {
+                font-size: clamp(1.8rem, 10vw, 3.5rem);
+            }
+            .subheader-text {
+                font-size: clamp(0.9rem, 5vw, 1.5rem);
+            }
+            .cta-button {
+                padding: 12px 25px;
+                font-size: clamp(0.9rem, 4vw, 1.3rem);
+            }
+        }
 
-    .icon-cctv::before { content: "📹"; }
-    .icon-teacher::before { content: "👩‍🏫"; }
-    .icon-activity::before { content: "🎨"; }
-    .icon-facility::before { content: "🏫"; }
-    .icon-growth::before { content: "🌱"; }
-    .icon-vibrant::before { content: "💡"; }
-
-    .top-image {
-      width: 100%;
-      border-radius: 15px;
-      max-height: 200px;
-      object-fit: cover;
-      margin-bottom: 20px;
-    }
-  </style>
+        .icon-cctv::before { content: "📹"; }
+        .icon-teacher::before { content: "👩‍🏫"; }
+        .icon-activity::before { content: "🎨"; }
+        .icon-facility::before { content: "🏫"; }
+        .icon-growth::before { content: "🌱"; }
+        .icon-vibrant::before { content: "💡"; }
+    </style>
 </head>
 <body>
-  <div class="banner-container">
 
     <!-- Language Toggle -->
-    <div class="lang-toggle">
-      <button onclick="setLang('en')">English</button>
-      <button onclick="setLang('hi')">हिंदी</button>
+    <div style="position: absolute; top: 20px; right: 30px; z-index: 50;">
+        <select id="languageToggle" class="p-2 rounded text-black">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+        </select>
     </div>
 
-    <!-- Optional Top Image -->
-    <img src="https://images.unsplash.com/photo-1606312618773-bafda5b2103f" class="top-image" alt="School children"/>
+    <div class="banner-container">
+        <!-- School Name -->
+        <h3 class="school-name">Swatantrata Senani Sant Ladaram Shikshan Sansthan</h3>
 
-    <!-- English Content -->
-    <div class="lang-content lang-en active">
-      <h3 class="school-name">Swatantrata Senani Sant Ladaram Shikshan Sansthan</h3>
-      <h1 class="header-text">Unlock Your Child's Future!</h1>
-      <h2 class="subheader-text">Admissions Open for Academic Year 2025-26</h2>
+        <!-- Main Header -->
+        <h1 class="header-text" data-en="Unlock Your Child's Future!" data-hi="अपने बच्चे का भविष्य संवारें!">Unlock Your Child's Future!</h1>
+        <h2 class="subheader-text" data-en="Admissions Open for Academic Year 2025-26" data-hi="शैक्षणिक वर्ष 2025-26 के लिए प्रवेश खुले हैं">Admissions Open for Academic Year 2025-26</h2>
 
-      <div class="features-grid">
-        <div class="feature-item"><span class="feature-icon icon-cctv"></span><p class="feature-text">Secure Campus with CCTV Surveillance</p></div>
-        <div class="feature-item"><span class="feature-icon icon-teacher"></span><p class="feature-text">Dedicated & Best-in-Class Educators</p></div>
-        <div class="feature-item"><span class="feature-icon icon-activity"></span><p class="feature-text">Exciting Co-curricular Activities</p></div>
-        <div class="feature-item"><span class="feature-icon icon-facility"></span><p class="feature-text">Modern Learning Facilities</p></div>
-        <div class="feature-item"><span class="feature-icon icon-growth"></span><p class="feature-text">Holistic Development Programs</p></div>
-        <div class="feature-item"><span class="feature-icon icon-vibrant"></span><p class="feature-text">Vibrant & Engaging Campus Life</p></div>
-      </div>
+        <!-- Feature Grid -->
+        <div class="features-grid">
+            <div class="feature-item">
+                <span class="feature-icon icon-cctv"></span>
+                <p class="feature-text" data-en="Secure Campus with CCTV Surveillance" data-hi="सीसीटीवी निगरानी के साथ सुरक्षित परिसर">Secure Campus with CCTV Surveillance</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon icon-teacher"></span>
+                <p class="feature-text" data-en="Dedicated & Best-in-Class Educators" data-hi="समर्पित और श्रेष्ठ शिक्षक">Dedicated & Best-in-Class Educators</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon icon-activity"></span>
+                <p class="feature-text" data-en="Exciting Co-curricular Activities" data-hi="रोचक सह-पाठयक्रम गतिविधियाँ">Exciting Co-curricular Activities</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon icon-facility"></span>
+                <p class="feature-text" data-en="Modern Learning Facilities" data-hi="आधुनिक शिक्षण सुविधाएँ">Modern Learning Facilities</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon icon-growth"></span>
+                <p class="feature-text" data-en="Holistic Development Programs" data-hi="समग्र विकास कार्यक्रम">Holistic Development Programs</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon icon-vibrant"></span>
+                <p class="feature-text" data-en="Vibrant & Engaging Campus Life" data-hi="जीवंत और प्रेरणादायक कैंपस जीवन">Vibrant & Engaging Campus Life</p>
+            </div>
+        </div>
 
-      <a href="https://wa.me/919664096942?text=I%20want%20to%20admit%20my%20child%20in%20your%20school." class="cta-button" target="_blank">Enroll Now!</a>
-      <p class="text-sm mt-5 opacity-80">Visit our website or contact us for more details.</p>
+        <!-- Call to Action -->
+        <a href="https://wa.me/919664096942?text=मुझे%20अपने%20बच्चे%20को%20आपके%20स्कूल%20में%20प्रवेश%20दिलाना%20है।" 
+           class="cta-button" 
+           target="_blank"
+           data-en="Enroll Now!" 
+           data-hi="अब प्रवेश लें!">Enroll Now!</a>
+
+        <!-- Footer -->
+        <p class="text-sm mt-5 opacity-80" data-en="Visit our website or contact us for more details." data-hi="अधिक जानकारी के लिए हमारी वेबसाइट देखें या संपर्क करें।">Visit our website or contact us for more details.</p>
     </div>
 
-    <!-- Hindi Content -->
-    <div class="lang-content lang-hi">
-      <h3 class="school-name">स्वतंत्रता सेनानी सन्त लादाराम शिक्षण संस्थान</h3>
-      <h1 class="header-text">अपने बच्चे का भविष्य संवारिए!</h1>
-      <h2 class="subheader-text">शैक्षणिक सत्र 2025-26 के लिए प्रवेश प्रारंभ</h2>
-
-      <div class="features-grid">
-        <div class="feature-item"><span class="feature-icon icon-cctv"></span><p class="feature-text">सुरक्षित परिसर - CCTV निगरानी</p></div>
-        <div class="feature-item"><span class="feature-icon icon-teacher"></span><p class="feature-text">समर्पित और अनुभवी शिक्षक</p></div>
-        <div class="feature-item"><span class="feature-icon icon-activity"></span><p class="feature-text">रोचक सह-पाठ्यक्रम गतिविधियाँ</p></div>
-        <div class="feature-item"><span class="feature-icon icon-facility"></span><p class="feature-text">आधुनिक शिक्षण सुविधाएं</p></div>
-        <div class="feature-item"><span class="feature-icon icon-growth"></span><p class="feature-text">समग्र विकास कार्यक्रम</p></div>
-        <div class="feature-item"><span class="feature-icon icon-vibrant"></span><p class="feature-text">जीवंत और प्रेरणादायक माहौल</p></div>
-      </div>
-
-      <a href="https://wa.me/919664096942?text=मुझे%20अपने%20बच्चे%20को%20आपके%20स्कूल%20में%20प्रवेश%20दिलाना%20है।" class="cta-button" target="_blank">अभी आवेदन करें!</a>
-      <p class="text-sm mt-5 opacity-80">अधिक जानकारी के लिए हमारी वेबसाइट पर जाएं या संपर्क करें।</p>
-    </div>
-
-  </div>
-
-  <script>
-    function setLang(lang) {
-      document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-      document.querySelector('.lang-' + lang).classList.add('active');
-    }
-  </script>
+    <script>
+        document.getElementById('languageToggle').addEventListener('change', function () {
+            const selectedLang = this.value;
+            document.querySelectorAll('[data-en]').forEach(el => {
+                el.textContent = el.getAttribute('data-' + selectedLang);
+            });
+        });
+    </script>
 </body>
 </html>
